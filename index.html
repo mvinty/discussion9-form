@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Add fonts from Adobe fonts or Google Fonts -->
-    <title>Submit Recommendations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <title>Submit Recommendations</title>
     <!-- Add a favicon -->
 </head>
 <body>
   <!-- Implement a skip to main! -->
-    <!-- <form action="" method="post"> Connect to formspree.io-->
-        <label for="name">Name:</label>
+  <a href = "#skip" class="skip">Skip to Main Content</a>
+  <main id="skip">
+    <form action="https://formspree.io/f/mzbnvwbe" method="post"> 
+        <h1>My form:</h1>
+        <label for="name">Name here:</label>
         <input type="text" id="name" name="name"><br><br>
 <div class="radio">
+        
         <label>Area of Submission:</label><br>
         <!-- How can the label and button line up and be easily navigatable? -->
   <input type="radio" id="travel" name="interest" value="travel" required>
@@ -23,9 +29,8 @@
   <label for="recipe">Recipe</label><br>
   <input type="radio" id="pets" name="interest" value="pets">
   <label for="pets">Pets</label><br><br>
-</div>
-
-
+</div >
+  
         <label for="message">Message:</label>
         <textarea id="message" name="message"></textarea><br><br>
 
@@ -36,5 +41,6 @@
 
         <button type="reset">Reset</button>
       </form>
+    </main>
 </body>
 </html>

@@ -1,6 +1,12 @@
   /* Create an accessible color palette using var()function */
   /* https://www.w3schools.com/css/css3_variables.asp */
-  
+  :root {
+    --cool: rgb(0, 166, 255);
+  }
+
+  body{
+    font-family: "Oswald", sans-serif;
+  }
   form {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -10,15 +16,15 @@
     margin: 20px auto;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: #702082;
-    background: #CFC096;
+    color: black;
+    background: var(--cool);
   }
 
   .radio {
     grid-column-start: 1;
     grid-column-end: 3;
     /* background: #575294; */
-    color: #702082;
+    color: black;
   }
 
   #name {
@@ -26,8 +32,8 @@
     padding: 10px;
     font-size: 18px;
     font-weight: bold;
-    background: #CFC096;
-    color: #9B9A6D;
+    background: white;
+    color: black;
   }
 
   #message {
@@ -39,14 +45,14 @@
   input,
   textarea {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 3px solid black;
     width: 100%;
   }
 
   input[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #208124;
     color: white;
     border: none;
     border-radius: 5px;
@@ -55,4 +61,19 @@
 
   input[type="submit"]:hover {
     background-color: #45a049;
+  }
+
+  .skip {
+    position: absolute;
+    left: -1000px;
+  }
+  .skip:focus {
+    left: 10px;
+  }
+
+  h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: larger;
   }
